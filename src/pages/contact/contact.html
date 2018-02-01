@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>ion-Voice Recognizer</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+ 
+
+
+<ion-fab right bottom>
+    <button ion-fab color="primary" (click)="SpeechToText()"><ion-icon name="mic"></ion-icon></button>
+  </ion-fab>
+
+
+  <ion-list>
+    <ion-card *ngFor="let words of myresult" >
+    	<h2>{{words}}</h2> <button ion-button clear item-end (click)="TextToSpeach(words)">Audio</button>
+	</ion-card>
+  </ion-list>
+
+
+</ion-content>
